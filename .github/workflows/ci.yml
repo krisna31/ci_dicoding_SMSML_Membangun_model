@@ -29,17 +29,18 @@ jobs:
       - name: Run mlflow project
         run: |
           mlflow run MLProject --env-manager=local
+          ls -al mlruns
       - name: Get latest MLflow run_id
         run: |
-          RUN_ID=$(ls -td mlruns/0/models/*/ | head -n 1 | cut -d'/' -f4)
+          RUN_ID=$(ls -td mlruns/0/*/ | head -n 1 | cut -d'/' -f3)
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
           echo "Latest run_id: $RUN_ID"
       - name: Save mlruns to repo
         run: |
           git config --global user.name ${{ secrets.username }}
           git config --global user.email ${{ secrets.email }}
-          git add mlruns
-          git commit -am "save commit and push from CI run"
+          git add -f mlruns
+          git commit -m "save commit and push from CI run"
           git push origin main
       - name: Build Docker Model
         run: |
