@@ -30,4 +30,4 @@ jobs:
           git config --global user.email ${{ secrets.email }}
           git add mlruns/
           git commit -m "save commit and push mlruns from CI run"
-          git push origin master
+          git push origin main
