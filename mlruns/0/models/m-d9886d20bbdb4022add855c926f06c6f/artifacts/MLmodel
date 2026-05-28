@@ -1,0 +1,46 @@
+artifact_path: /home/runner/work/ci_dicoding_SMSML_Membangun_model/ci_dicoding_SMSML_Membangun_model/mlruns/0/models/m-d9886d20bbdb4022add855c926f06c6f/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.12.0
+model_id: m-d9886d20bbdb4022add855c926f06c6f
+model_size_bytes: 3607792
+model_uuid: m-d9886d20bbdb4022add855c926f06c6f
+prompts: null
+run_id: d69b0808507b48f7880a7d153550728f
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "promoted", "required": true}, {"type": "double",
+    "name": "review", "required": true}, {"type": "double", "name": "projects", "required":
+    true}, {"type": "long", "name": "salary", "required": true}, {"type": "double",
+    "name": "tenure", "required": true}, {"type": "double", "name": "satisfaction",
+    "required": true}, {"type": "long", "name": "bonus", "required": true}, {"type":
+    "boolean", "name": "department_admin", "required": true}, {"type": "boolean",
+    "name": "department_engineering", "required": true}, {"type": "boolean", "name":
+    "department_finance", "required": true}, {"type": "boolean", "name": "department_logistics",
+    "required": true}, {"type": "boolean", "name": "department_marketing", "required":
+    true}, {"type": "boolean", "name": "department_operations", "required": true},
+    {"type": "boolean", "name": "department_retail", "required": true}, {"type": "boolean",
+    "name": "department_sales", "required": true}, {"type": "boolean", "name": "department_support",
+    "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-05-28 10:08:00.443689'
