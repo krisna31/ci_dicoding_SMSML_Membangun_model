@@ -1,0 +1,11 @@
+name: employee_churn_mlflow
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      n_estimators: {type: int, default: 200}
+      max_depth: {type: int, default: 8}
+      dataset_folder : {type: string, default: "employee_churn_data_preprocessing"}
+    command: "python modelling.py {n_estimators} {max_depth} {dataset_folder}"
